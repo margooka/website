@@ -4,27 +4,23 @@
 <p><a href="./index.html">home</a></p>
 <h1>B-Trees</h1>
 
-<pre>
-B-Trees are used to reduce the height of a tree as you add to it i.e. making sure the tree is not "splindly." They are self-balancing trees
-
-B-Trees of order L=2 are 2-3 Trees and B-Trees of order L=3 are 2-3-4 Trees (2-4 Trees).
-
-2-3 Trees have at most 2 elements per node and at most 3 children per node.
-
-2-3-4 Trees have at most 3 elements per node and at most 4 children per node.
-
-Note: you can have other types of elements in your B-Tree such as letters or arbitrary objects (so long as these objects can be ordered).
-
-Algorithm for searching for an element of a 2-3 Tree:
+<p>
+</br>B-Trees are used to reduce the height of a tree as you add to it i.e. making sure the tree is not "splindly." They are self-balancing trees
+</br>B-Trees of order L=2 are 2-3 Trees and B-Trees of order L=3 are 2-3-4 Trees (2-4 Trees).
+</br>2-3 Trees have at most 2 elements per node and at most 3 children per node.
+</br>2-3-4 Trees have at most 3 elements per node and at most 4 children per node.
+</br>Note: you can have other types of elements in your B-Tree such as letters or arbitrary objects (so long as these objects can be ordered).
+</br>Algorithm for searching for an element of a 2-3 Tree:
 <ul>
   <li>(Similar to <b>searching</b> in a BST)</li>
   <li>Look at each node and determine which child to continur your search in </li>
   <ul>
   	<li>Repeat until element is found</li>
   </ul>
+</ul>
 
- Algorithm for <b>inserting</b> an element into a 2-3 Tree:
- <ul>
+</br>Algorithm for <b>inserting</b> an element into a 2-3 Tree:
+<ul>
  	<li>Insert element into the leaf node that it should be added to</li>
  	<ul>
  		<li>If node is not full</li>
@@ -42,8 +38,20 @@ Algorithm for searching for an element of a 2-3 Tree:
  			</ul>
  		</ul>
  	</ul>
- </ul>
 </ul> 
-</pre>
+</br> Algorithm for <b>deleting</b> an element from a 2-3 Tree:
+<ul>(There are a few different algorithms)</ul>
+<ul>(It's hard)</ul>
+</br><b>B-Tree Invariants</b> (things that are always true):
+<ul>All leaf nodes are the same distance from the root</ul>
+<ul>If a non-leaf node contains n elements, it has n+1 children </ul>
+<ul>Every node (other than the root) is at least half full</ul>
+<ul>The root has at least two children as long as the height is &lt; 1</ul>
+
+</br><b>Time Complexity:</b>
+</br>Searching for a node: <b>O(logn)</b>
+</br>Insertion: <b>O(logn)</b>
+</br>Deletion: <b>O(logn)</b>
+</p>
 </body>
 </html>
