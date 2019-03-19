@@ -14,6 +14,36 @@ B-Trees of order L=2 are 2-3 Trees and B-Trees of order L=3 are 2-3-4 Trees (2-4
 2-3-4 Trees have at most 3 elements per node and at most 4 children per node.
 
 Note: you can have other types of elements in your B-Tree such as letters or arbitrary objects (so long as these objects can be ordered).
+
+Algorithm for searching for an element of a 2-3 Tree:
+<ul>
+  <li>(Similar to <b>searching</b> in a BST)</li>
+  <li>Look at each node and determine which child to continur your search in </li>
+  <ul>
+  	<li>Repeat until element is found</li>
+  </ul>
+
+ Algorithm for <b>inserting</b> an element into a 2-3 Tree:
+ <ul>
+ 	<li>Insert element into the leaf node that it should be added to</li>
+ 	<ul>
+ 		<li>If node is not full</li>
+ 		<ul>
+ 			<li>Add that element to the node</li>
+ 		</ul>
+ 		<li>If leaf node is full</li>
+ 		<ul>
+ 			<li>Split the elements of the full node plus the new element into two child nodes with the median of the three elements acting as the parent</li>
+ 			<li>If possible, add this element to the original parent node</li>
+ 			<li>If not possible, continue this splitting process upwards</li>
+ 			<li>If the process continues to the root node create a new node above the root</li>
+ 			<ul>
+ 				<li>Note: this is the only time where the height of the tree can be increased</li>
+ 			</ul>
+ 		</ul>
+ 	</ul>
+ </ul>
+</ul> 
 </pre>
 </body>
 </html>
