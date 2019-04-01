@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="./navbar.css">
 <style>
 	p {font-family:"Courier";}
 .collapsible {
@@ -42,7 +43,19 @@
 </head>
 
 <body>
-<p><a href="./index.html">home</a></p>
+<div class="navbar">
+  <a href="./index.html">Home</a>
+  <a href="./teaching.html">Teaching</a>
+  <div class="dropdown">
+    <button class="dropbtn">Fun Things 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="./art.html">Art</a>
+      <a href="./juice.html">Juice</a>
+    </div>
+  </div> 
+</div>
 
 <p>Over the last few years I've written notes on various computer science topics. For the most part these were written with the intent of teaching other students so parts may be informal and lack thorough explanation.</p>
 
