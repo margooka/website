@@ -25,13 +25,13 @@
   outline: none;
   color: white;
   padding: 14px 16px;
-  background-color: #228e0f;
+  background-color: inherit; /* Mobile Button that has the dropdown */
   font-family: inherit;
   margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #f7cfec;
+  background-color: #228e0f;
 }
 
 .dropdown-content {
