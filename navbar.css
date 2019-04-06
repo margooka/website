@@ -31,7 +31,7 @@
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #228e0f;
+  background-color: #f7cfec; /* Mobile Changes color when you click button that has dropdown */
 }
 
 .dropdown-content {
