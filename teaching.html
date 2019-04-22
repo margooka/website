@@ -14,7 +14,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="stylesheet" type="text/css" href="navbar.css">
 <style>
-	p {font-family:"Courier";}
+	p,li,ul {font-family:"Courier";}
 .collapsible {
   background-color: #f7cfec; /*#777*/
   color: white;
@@ -74,14 +74,14 @@
 <div class="content">
 
 <p>
-</br>B-Trees are used to reduce the height of a tree as you add to it i.e. making sure the tree is not "splindly." They are self-balancing trees
+</br>B-Trees are used to reduce the height of a tree as you add to it i.e. making sure the tree is not "spindly." They are self-balancing trees
 </br>B-Trees of order L=2 are 2-3 Trees and B-Trees of order L=3 are 2-3-4 Trees (2-4 Trees).
 </br>2-3 Trees have at most 2 elements per node and at most 3 children per node.
 </br>2-3-4 Trees have at most 3 elements per node and at most 4 children per node.
 </br>2-3 Tree:
-</br><center><img src="teaching/2-3tree.png" alt="2-3" height="400"></center>
+</br><center><img src="teaching/2-3tree.png" alt="2-3" height="150"></center>
 </br>2-3-4 Tree:
-</br><center><img src="teaching/2-3-4tree.png" alt="2-3-4" height="400"></center>
+</br><center><img src="teaching/2-3-4tree.png" alt="2-3-4" height="150"></center>
 
 </br>Note: you can have other types of elements in your B-Tree such as letters or arbitrary objects (so long as these objects can be ordered).
 </br>Algorithm for searching for an element of a 2-3 Tree:
@@ -123,7 +123,7 @@
 	<li>All leaf nodes are the same distance from the root</li>
 	<li>If a non-leaf node contains n elements, it has n+1 children</li>
 	<li>Every node (other than the root) is at least half full</li>
-	<li>>The root has at least two children as long as the height is &lt; 1</li>
+	<li>The root has at least two children as long as the height is 1</li>
 </ul>
 
 </br><b>Time Complexity:</b>
@@ -133,6 +133,16 @@
 </p>
 </div>
 
+<button class="collapsible">Euclidean Minimum Spanning Trees</button>
+<div class="content">
+  <p>
+  </br>The Euclidean Minimum Spanning Tree of a set of points is the MST of points where edge weights are the Euclidean distances between the points defining the edge.
+  </br>Naively you can compute the EMST by creating a complete graph the set of points where the edge weights are the Euclidean distances between those two points and then run Prim's or Kruskal's on the resulting graph.
+  </br>Space Complexity: <b>O(n^2)</b>
+  </br>Time Complexity is <b>O(n^2)</b>
+  </br>A more efficient strategy is to note that the Delaunay Triangulation contains the EMST and an algorithm for caluculating the Deluanay Triangulation runs in <b>O(nlogn)</b>. Simply run Prim's or Kruskal's on the Delaunay Triangulation. The resulting for computing the EMST run in <b>O(nlogn)</b>.
+  </p>
+</div>
 
 
 <script>
