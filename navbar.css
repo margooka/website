@@ -5,7 +5,7 @@
 /*228e0f yucky green*/
 .navbar {
   overflow: hidden;
-  background-color: #f7cfec;
+  background-color: #963d5a; /*#f7cfec;*/
 }
 
 .navbar a {
@@ -34,7 +34,7 @@
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #f7cfec; /* Mobile Changes color when you click button that has dropdown */
+  background-color: #963D5A; /*#f7cfec; /* Mobile Changes color when you click button that has dropdown */
 }
 
 .dropdown-content {
