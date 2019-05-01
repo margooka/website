@@ -6,6 +6,8 @@
 .navbar {
   overflow: hidden;
   background-color: #963d5a; /*#f7cfec;*/
+  margin:-8px;
+  padding:0px;
 }
 
 .navbar a {
