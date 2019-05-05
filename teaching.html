@@ -144,6 +144,45 @@
   </p>
 </div>
 
+<button class="collapsible">SQL</button>
+<div class="content">
+  <p>
+  SQL is an example of a declarative programming language. Statements do not describe computations directly, but instead describe the desired result of some computation.
+
+  </br>A table has a fixed number of named and typed columns. Each row of a table represents a data record and has one value for each column. We can choose which columns to show, filter using a where clause, and sort with an order by clause using the following syntax: 
+  </br>select [columns] from [tables] where [condition] group by [group] order by [order] limit [limit];
+
+  </br>Alternatively if you have individual data points you can create tables with this syntax as well:
+  </br>select [val] as [type], ... union
+  </br>select ... 
+
+  </br>When tables are joined, the resulting table contains a new row for each combination of rows in the input tables. If two tables are joined and the left table has m rows and the right table has n rows, then the joined table will have m · n rows. Joins are expressed in SQL by separating table names by commas in the from clause of a select statement. 
+  </br>SELECT b.Berkeley - a.Berkeley, b.Stanford - a.Stanford, a.Year, b.Year
+  </br>FROM Football AS a, Football AS b WHERE a.Year < b.Year;
+
+  </br>In order to perform SQL aggregation, we can group rows in our table by one or more attributes. Once we have groups, we can aggregate over the groups in our table and find things like:
+<ul>
+  <li>the maximum value (MAX),</li>
+  <li>the minimum value (MIN),</li>
+  <li>the number of rows in the group (COUNT),</li>
+  <li>the average over all of the values (AVG),</li>
+</ul>
+  </br>and more! SELECT statements that use aggregation are usually marked by two things: an aggregate function (MAX, MIN, COUNT, AVG, etc.) and a GROUP BY clause. GROUP BY [column(s)] groups together rows with the same value in each column(s). In this section we will only use COUNT, which will count the number of rows in each group.
+  </br>SELECT number, COUNT(*) AS count FROM students GROUP BY number ORDER BY count DESC LIMIT 10;
+  </br>A table defined within a with clause may have a single recursive case that defines output rows in terms of other output rows. For example, the with clause below defines a table of integers from 5 to 15, of which the odd values are selected and squared.
+  </br>sqlite> with
+  </br>...>  ints(n) as (
+  </br>...>  select 5 union
+  </br>...>  select n+1 from ints where n < 15)
+  </br>...>  select n, n*n from ints where n % 2 = 1;
+  </br>5|25
+  </br>7|49
+  </br>9|81
+  </br>11|121
+  </br>13|169
+  </br>15|225
+  </p>
+</div>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
