@@ -144,6 +144,34 @@
   </p>
 </div>
 
+<button class="collapsible">Iterators in Python</button>
+<div class="content">
+  <p>
+  </br>When we define classes we can choose for them to have iter() and next() methods. This is important if we want to define objects that act like a list for example or, alternatively, you can think of it as giving an order to the elements in some container you define.
+  </br><b>iter(iterable)</b>:  return and iterator over the elements of an iterable value
+  </br><b>next(iterator)</b>: return the next element in an iterator
+
+  </br>How is an iterator different from a list?
+  </br>Think of the iterable as a book and the iterator as a bookmark you can only use once.
+
+  </br>Also, say you have a list l = [1, 2, 3] it wouldn’t make sense to call next(l). This doesn’t make sense; next from what? However if you turned l into an iterator l_iter = iter(l) then that’s telling us to start on the first element then subsequent calls to next(l_iter) will give us the next element after.
+
+  </br>>>> l = [1, 2, 3]
+  </br>>>> next(l)
+  </br>error
+  </br>>>> l_iter = iter(l)
+  </br>>>> next(l_iter)
+  </br>1
+  </br>>>> next(l_iter)
+  </br>2
+
+  </br>When there are no elements left to go through you should raise a StopIteration exception.
+  </br>Remember that once you go through an iterator you can’t go back. So, once you’ve iterated over everything that instance of the iterator is now basically useless.
+
+  </br>Also, for loops implicitly call on iter and next.
+  </p>
+</div>
+
 <button class="collapsible">SQL</button>
 <div class="content">
   <p>
