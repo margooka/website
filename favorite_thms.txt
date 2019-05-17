@@ -1,0 +1,4 @@
+RanK-Nullity Theorem
+Let V, W be vector spaces where V is finite dimensional. Let T:V->W be a linear transformation. Then,
+dim Im T + dim Ker T = dim V
+
