@@ -6,8 +6,8 @@
 .navbar {
   overflow: hidden;
   background-color: #963d5a; /*#f7cfec;*/
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .navbar a {
@@ -17,6 +17,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  margin: 0;
 }
 
 .dropdown {
