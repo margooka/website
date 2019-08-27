@@ -3,6 +3,9 @@
 /*#f7cfec Dark Pink*/
 /*#ffeaf9 Light Pink*/
 /*228e0f yucky green*/
+
+body {margin:0;}
+
 .navbar {
   overflow: hidden;
   background-color: #963d5a; /*#f7cfec;*/
