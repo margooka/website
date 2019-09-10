@@ -24,6 +24,48 @@
 body,h1 {font-family: "Montserrat", sans-serif}
 img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
 </style>
 <body>
 
@@ -36,7 +78,7 @@ img {margin-bottom: -7px}
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="./art2.html">Art</a>
+      <a href="./art.html">Art</a>
       <a href="./juice.html">Juice</a>
     </div>
   </div> 
@@ -50,6 +92,12 @@ img {margin-bottom: -7px}
 <!-- Photo Grid -->
 <div class="w3-row-padding" id="myGrid" style="margin-bottom:128px">
   <div class="w3-third">
+    <div class="container">
+      <img src="art/scissors.JPG" class="image" style="width:100%">
+      <div class="middle">
+      <div class="text">type: collage; materials: cut/ripped magazine, oil pastel</div>
+    </div>
+  </div>
     <img src="art/scissors.JPG" style="width:100%">
     <img src="art/japanesedoll.JPG" style="width:100%">
     <img src="art/flower1.JPG" style="width:100%">
